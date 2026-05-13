@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>게임 재화 시세 · 거래 가이드 2026 | 아이템매니아</title>
+<meta name="description" content="리니지클래식 아데나, 아이온2 키나, 메이플 메소 등 게임별 재화 시세와 거래 흐름을 한눈에 비교하세요. 아이템매니아에서 안전하게 거래하세요.">
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+<meta name="NaverBot" content="index,follow">
+<meta name="Yeti" content="index,follow">
+<link rel="canonical" href="https://www.itemmania.com/game_economy">
+
+<!-- FAQ 구조화 데이터 (네이버/구글 제로클릭 대응) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"리니지클래식 쌀먹 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"리니지클래식은 아데나 시세 수요가 높고 거래 연결성이 좋아 쌀먹 관심 유저가 가장 많이 확인하는 게임입니다. 아이템매니아에서 아데나·아이템·계정 거래를 확인하세요."}},
+  {"@type":"Question","name":"아이온2 쌀먹 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"아이온2는 키나 시세와 쌀먹 탐색 수요가 동시에 확인되는 게임입니다. 키나·아이템·계정 거래는 아이템매니아에서 확인하세요."}},
+  {"@type":"Question","name":"메이플스토리 쌀먹 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"메이플스토리는 메소·아이템·계정 거래 수요가 꾸준한 대표 쌀먹 관심 게임입니다. 아이템매니아에서 실시간 메소 시세를 확인하세요."}},
+  {"@type":"Question","name":"게임 재화 시세는 어디서 확인하나요?","acceptedAnswer":{"@type":"Answer","text":"아이템매니아 게임별 상품 리스트에서 실시간 거래 시세와 거래량을 확인할 수 있습니다."}}
+]}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+/* ── 리셋 & 기본 ── */
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f0f2f5;color:#222;font-family:'Noto Sans KR',sans-serif;font-size:13px;line-height:1.5}
+a{text-decoration:none;color:inherit}
+
+/* ══════════════════════════════════
+   GNB — 실제 아이템매니아 디자인 직접 구현
+   ══════════════════════════════════ */
+.g-header{background:#fff;border-bottom:1px solid #e0e0e0;position:sticky;top:0;z-index:100}
+.header-inner{max-width:980px;margin:0 auto;height:60px;display:flex;align-items:center;gap:0;padding:0 10px}
+
+/* 로고 */
+.header-logo{display:flex;align-items:center;flex-shrink:0;margin-right:20px}
+.header-logo img{height:36px;width:auto}
+/* 로고 이미지 없을 때 폴백 */
+.logo-fallback{display:flex;align-items:center;gap:3px;flex-shrink:0;margin-right:20px}
+.logo-box{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;background:#1a8f2e;color:#fff;font-size:11px;font-weight:900;padding:3px 6px;border-radius:5px;line-height:1.2;letter-spacing:-.3px}
+.logo-box em{display:block;font-size:9px;font-style:normal;color:#a8e6b0;font-weight:400}
+.logo-text{font-size:16px;font-weight:900;color:#111;margin-left:6px;white-space:nowrap}
+
+/* 네비 */
+.header-nav{display:flex;flex:1}
+.header-nav a{padding:0 14px;height:60px;display:flex;align-items:center;font-size:14px;color:#333;font-weight:500;white-space:nowrap;transition:color .15s}
+.header-nav a:hover{color:#1565C0}
+
+/* 우측 액션 */
+.header-actions{display:flex;align-items:center;gap:10px;margin-left:auto;flex-shrink:0}
+.header-logins{display:flex;align-items:center;gap:0;font-size:13px}
+.header-logins a,.header-logins button{color:#444;background:none;border:none;cursor:pointer;font-size:13px;font-family:inherit;padding:0 6px}
+.header-logins .divider{color:#ddd;font-size:12px}
+.header-menu{background:none;border:none;cursor:pointer;display:flex;flex-direction:column;gap:4px;padding:6px}
+.header-menu span{display:block;width:20px;height:2px;background:#444;border-radius:2px}
+
+/* 검색바 */
+.header-search{background:#fff;border-bottom:1px solid #e0e0e0;padding:10px 0}
+.search-inner{max-width:980px;margin:0 auto;padding:0 10px;display:flex;align-items:center;gap:8px}
+.search-form{display:flex;align-items:center;border:2px solid #1565C0;border-radius:8px;overflow:hidden;flex:1;max-width:600px;background:#fff}
+.trade-type-btn{padding:0 12px;height:40px;font-size:13px;color:#333;font-weight:600;background:none;border:none;border-right:1px solid #ddd;cursor:pointer;white-space:nowrap;font-family:inherit}
+.search-input{flex:1;border:none;padding:0 12px;font-size:13px;font-family:inherit;outline:none;height:40px}
+.search-clear{color:#bbb;padding:0 8px;cursor:pointer;font-size:18px;line-height:1;background:none;border:none}
+.search-btn{background:#1565C0;color:#fff;border:none;padding:0 22px;height:40px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;display:flex;align-items:center;gap:5px}
+.search-btn svg{width:16px;height:16px;fill:#fff}
+.reg-btn{background:#fff;border:2px solid #1565C0;color:#1565C0;border-radius:8px;padding:0 14px;height:40px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:4px;white-space:nowrap;margin-left:6px}
+.reg-btn:hover{background:#e8f0fe}
+
+/* ══════════════════════════════════
+   게임 썸네일 배너
+   ══════════════════════════════════ */
+.banner-wrap{background:#fff;border-bottom:1px solid #e8e8e8;padding:14px 0}
+.banner-inner{max-width:980px;margin:0 auto;padding:0 10px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.banner-card{border-radius:8px;overflow:hidden;position:relative;height:110px;cursor:pointer;display:block}
+.banner-card:hover .b-overlay{background:rgba(0,0,0,.55)}
+.b-bg{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:38px;position:relative}
+.b-lineagec{background:linear-gradient(135deg,#1a0a00,#5c3317,#8b5e3c)}
+.b-aion2   {background:linear-gradient(135deg,#001533,#0a3060,#1a6ba8)}
+.b-maple   {background:linear-gradient(135deg,#0a2e0a,#1a6b1a,#4caf50)}
+.b-dnf     {background:linear-gradient(135deg,#0d0d2e,#1a1a6b,#3a3ab8)}
+.b-loa     {background:linear-gradient(135deg,#001020,#003366,#0066cc)}
+.b-lineagem{background:linear-gradient(135deg,#1a0000,#5c0000,#990000)}
+.b-gosang  {background:linear-gradient(135deg,#1a1000,#5c3c00,#c87800)}
+.b-maplew  {background:linear-gradient(135deg,#001a33,#004080,#0077cc)}
+.b-overlay{position:absolute;inset:0;background:rgba(0,0,0,.38);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:8px;transition:background .2s}
+.b-name{color:#fff;font-size:13px;font-weight:900;text-align:center;margin-bottom:5px;text-shadow:0 1px 3px rgba(0,0,0,.6);line-height:1.3}
+.b-btn{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.55);color:#fff;font-size:11px;font-weight:700;padding:3px 12px;border-radius:3px}
+
+/* ══════════════════════════════════
+   메인 콘텐츠
+   ══════════════════════════════════ */
+.page-wrap{max-width:980px;margin:0 auto;padding:14px 10px 48px}
+
+/* 페이지 타이틀 */
+.page-title-bar{background:#fff;border:1px solid #e0e0e0;border-radius:4px;padding:14px 16px;margin-bottom:12px}
+.page-title-bar h1{font-size:17px;font-weight:900;margin-bottom:4px}
+.page-title-bar p{font-size:12px;color:#666;line-height:1.6}
+.page-title-bar .notice{font-size:11px;color:#aaa;margin-top:6px}
+
+/* SEO 텍스트 블록 (검색엔진이 읽는 영역) */
+.seo-block{background:#fff;border:1px solid #e0e0e0;border-radius:4px;padding:16px;margin-bottom:12px}
+.seo-block h2{font-size:15px;font-weight:900;margin-bottom:10px;color:#1a1a1a;border-bottom:2px solid #1565C0;padding-bottom:8px;display:inline-block}
+.seo-intro{font-size:13px;color:#444;line-height:1.8;margin-bottom:12px}
+.seo-game-list{display:flex;flex-direction:column;gap:10px}
+.seo-game-item{padding:12px 14px;background:#f9fbff;border:1px solid #e3eaf8;border-radius:4px;border-left:3px solid #1565C0}
+.seo-game-item h3{font-size:13px;font-weight:900;margin-bottom:4px;color:#1565C0}
+.seo-game-item p{font-size:12px;color:#555;line-height:1.65}
+.seo-game-item .go-btn{display:inline-block;margin-top:7px;background:#1565C0;color:#fff;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700}
+.seo-game-item .go-btn:hover{background:#0d47a1}
+
+/* 비교 테이블 */
+.compare-block{background:#fff;border:1px solid #e0e0e0;border-radius:4px;margin-bottom:12px;overflow:hidden}
+.block-hd{padding:11px 14px;border-bottom:1px solid #ebebeb;font-size:14px;font-weight:900;display:flex;align-items:center;justify-content:space-between}
+.block-hd span{font-size:11px;color:#aaa;font-weight:400}
+.ct{width:100%;border-collapse:collapse}
+.ct th{background:#f8f8f8;padding:8px 12px;font-size:11px;font-weight:700;color:#666;text-align:left;border-bottom:1px solid #ebebeb}
+.ct td{padding:10px 12px;font-size:13px;border-bottom:1px solid #f5f5f5;vertical-align:middle}
+.ct tr:last-child td{border-bottom:none}
+.ct tr:hover td{background:#f9fbff}
+.rank-num{font-size:13px;font-weight:900;color:#1565C0;text-align:center;white-space:nowrap}
+.g-icon{width:28px;height:28px;border-radius:4px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;vertical-align:middle;margin-right:5px}
+.game-name-cell{white-space:nowrap}
+.dot-h{color:#2e7d32;font-weight:700}
+.dot-m{color:#e65100;font-weight:700}
+.dot-l{color:#888;font-weight:700}
+.go-link{color:#1565C0;font-size:12px;font-weight:700}
+.go-link:hover{text-decoration:underline}
+
+/* FAQ */
+.faq-block{background:#fff;border:1px solid #e0e0e0;border-radius:4px;margin-bottom:12px;overflow:hidden}
+.faq-item{border-bottom:1px solid #f5f5f5}
+.faq-item:last-child{border-bottom:none}
+.faq-q{padding:11px 14px;font-size:13px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;user-select:none}
+.faq-q::after{content:'＋';color:#bbb;font-weight:400}
+.faq-item.open .faq-q{color:#1565C0}
+.faq-item.open .faq-q::after{content:'－';color:#1565C0}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .25s,padding .2s;font-size:13px;color:#555;line-height:1.7;padding:0 14px}
+.faq-item.open .faq-a{max-height:200px;padding:0 14px 12px}
+
+/* ══════════════════════════════════
+   푸터 — 실제 아이템매니아 디자인 직접 구현
+   ══════════════════════════════════ */
+.g-footer{background:#fff;border-top:1px solid #e0e0e0;margin-top:10px}
+.footer-top{max-width:980px;margin:0 auto;padding:16px 10px 10px}
+.footer-links{display:flex;flex-wrap:wrap;gap:6px 16px;margin-bottom:10px}
+.footer-links a{font-size:12px;color:#555}
+.footer-links a:hover{color:#1565C0}
+.footer-links a.strong{font-weight:700;color:#d32f2f}
+.footer-divider{border:none;border-top:1px solid #ebebeb;margin:10px 0}
+.footer-inner{max-width:980px;margin:0 auto;padding:12px 10px 16px;display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+.footer-company .footer-company-name{font-size:13px;font-weight:700;margin-bottom:6px}
+.footer-row{font-size:11px;color:#888;margin-bottom:3px;display:flex;flex-wrap:wrap;gap:0 12px}
+.footer-copy{font-size:11px;color:#aaa;margin-top:6px}
+.footer-call{text-align:right;flex-shrink:0}
+.footer-call-number a{font-size:22px;font-weight:900;color:#1565C0}
+.footer-call-desc a{font-size:11px;color:#888;display:block;margin-top:2px}
+.footer-note{border-top:1px solid #ebebeb;padding:10px;text-align:center;font-size:11px;color:#aaa;max-width:980px;margin:0 auto}
+
+@media(max-width:720px){
+  .banner-inner{grid-template-columns:repeat(2,1fr)}
+  .header-nav{display:none}
+  .footer-inner{flex-direction:column}
+  .footer-call{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ GNB ══ -->
+<header class="g-header">
+  <div class="header-inner">
+    <!-- 로고: 실제 이미지 로드 시도, 실패하면 텍스트 폴백 -->
+    <div class="header-logo">
+      <a href="https://www.itemmania.com">
+        <img src="https://img1.itemmania.com/images2026/header-logo.png"
+             alt="아이템매니아" height="36"
+             onerror="this.parentElement.parentElement.style.display='none';document.getElementById('logo-fallback').style.display='flex'">
+      </a>
+    </div>
+    <div class="logo-fallback" id="logo-fallback" style="display:none">
+      <a href="https://www.itemmania.com" style="display:flex;align-items:center;gap:4px">
+        <div class="logo-box">1tem<em>mani@</em></div>
+        <span class="logo-text">아이템매니아</span>
+      </a>
+    </div>
+
+    <nav class="header-nav">
+      <a href="https://www.itemmania.com/game_charge/">게임 할인충전</a>
+      <a href="https://www.itemmania.com/portal/giftcard/">상품권몰</a>
+      <a href="https://www.gamemania.co.kr/" target="_blank">게임매니아</a>
+      <a href="https://www.itemmania.com/myroom/">마이룸</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="header-logins">
+        <button onclick="location.href='https://www.itemmania.com/portal/user/login.html'">로그인</button>
+        <span class="divider">|</span>
+        <a href="https://www.itemmania.com/portal/user">회원가입</a>
+      </div>
+      <button class="header-menu" aria-label="메뉴">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ══ 검색바 ══ -->
+<div class="header-search">
+  <div class="search-inner">
+    <form class="search-form" action="https://www.itemmania.com/sell/list.html" method="get">
+      <button type="button" class="trade-type-btn">팝니다</button>
+      <input class="search-input" type="text" name="searchGameServer" placeholder="게임명을 입력해주세요." autocomplete="off">
+      <button type="button" class="search-clear" onclick="this.previousElementSibling.value=''">×</button>
+      <button type="submit" class="search-btn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" stroke="#fff" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg>
+        검색
+      </button>
+    </form>
+    <a href="https://www.itemmania.com/sell/" class="reg-btn">＋ 상품등록</a>
+  </div>
+</div>
+
+<!-- ══ 게임 썸네일 배너 (보고서 순서: 리니지클래식, 아이온2, 메이플, 던파, 로아, 리니지M, 거상, 메이플월드) ══ -->
+<div class="banner-wrap">
+  <div class="banner-inner">
+    <a href="https://www.itemmania.com/sell/list.html?search_game=5913" target="_blank" class="banner-card">
+      <div class="b-bg b-lineagec">⚔️</div>
+      <div class="b-overlay">
+        <div class="b-name">리니지 클래식</div>
+        <div class="b-btn">거래 보러가기</div>
+      </div>
+    </a>
+    <a href="https://www.itemmania.com/sell/list.html?search_game=5799" target="_blank" class="banner-card">
+      <div class="b-bg b-aion2">🌐</div>
+      <div class="b-overlay">
+        <div class="b-name">아이온2</div>
+        <div class="b-btn">거래 보러가기</div>
+      </div>
+    </a>
+    <a href="https://www.itemmania.com/sell/list.html?search_game=138" target="_blank" class="banner-card">
+      <div class="b-bg b-maple">🍁</div>
+      <div class="b-overlay">
+        <div class="b-name">메이플스토리</div>
+        <div class="b-btn">거래 보러가기</div>
+      </div>
+    </a>
+    <a href="https://www.itemmania.com/sell/list.html?search_game=281" target="_blank" class="banner-card">
+      <div class="b-bg b-dnf">🗡️</div>
+      <div class="b-overlay">
+        <div class="b-name">던전앤파이터</div>
+        <div class="b-btn">거래 보러가기</div>
+      </div>
+    </a>
+    <a href="https://www.itemmania.com/sell/list.html?search_game=2696" target="_blank" class="banner-card">
+      <div class="b-bg b-loa">🏹</div>
+      <div class="b-overlay">
+        <div class="b-name">로스트아크</div>
+        <div class="b-btn">거래 보러가기</div>
+      </div>
+    </a>
+    <a href="https://www.itemmania.com/sell/list.html?search_game=3449" target="_blank" class="banner-card">
+      <div class="b-bg b-lineagem">⚔️</div>
+      <div class="b-overlay">
+        <div class="b-name">리니지M</div>
+        <div class="b-btn">거래 보러가기</div>
+      </div>
+    </a>
+    <a href="https://www.itemmania.com/sell/list.html?search_game=101" target="_blank" class="banner-card">
+      <div class="b-bg b-gosang">🏺</div>
+      <div class="b-overlay">
+        <div class="b-name">거상</div>
+        <div class="b-btn">거래 보러가기</div>
+      </div>
+    </a>
+    <a href="https://www.itemmania.com/sell/list.html?search_game=5233" target="_blank" class="banner-card">
+      <div class="b-bg b-maplew">🌍</div>
+      <div class="b-overlay">
+        <div class="b-name">메이플스토리월드</div>
+        <div class="b-btn">거래 보러가기</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- ══ 메인 콘텐츠 ══ -->
+<div class="page-wrap">
+
+  <!-- 페이지 타이틀 (SEO H1) -->
+  <div class="page-title-bar">
+    <h1>게임 재화 시세 · 거래 가이드 — 쌀먹 관심 게임 총정리</h1>
+    <p>리니지클래식 아데나, 아이온2 키나, 메이플스토리 메소 등 게임별 재화 시세와 쌀먹 수요를 정리했습니다.<br>아이템매니아에서 실시간 시세를 확인하고 안전하게 거래하세요.</p>
+    <div class="notice">※ 게임 내 경제 구조 정보 제공 목적이며, 매크로·약관 위반 방식은 포함하지 않습니다.</div>
+  </div>
+
+  <!-- SEO 핵심 텍스트 블록 (게임명+쌀먹 키워드 대응) -->
+  <div class="seo-block">
+    <h2>게임별 쌀먹 · 재화 시세 가이드</h2>
+    <p class="seo-intro">
+      아래 게임들은 재화(아데나·키나·메소·골드 등) 거래 수요가 확인된 게임입니다.
+      네이버·구글 검색 수요 기준으로 순위를 정렬했으며, 각 게임 거래 페이지에서 실시간 시세를 확인할 수 있습니다.
+    </p>
+    <div class="seo-game-list">
+
+      <div class="seo-game-item">
+        <h3>리니지클래식 쌀먹 · 아데나 시세</h3>
+        <p>리니지클래식은 아데나 시세 검색 수요가 가장 높은 게임입니다. 아데나·아이템·계정 거래 연결성이 높아 쌀먹 관심 유저가 많이 탐색하는 게임입니다. 서버별 아데나 시세와 거래량은 아이템매니아에서 실시간으로 확인할 수 있습니다.</p>
+        <a href="https://www.itemmania.com/sell/list.html?search_game=5913" target="_blank" class="go-btn">리니지클래식 거래 보러가기 →</a>
+      </div>
+
+      <div class="seo-game-item">
+        <h3>아이온2 쌀먹 · 키나 시세</h3>
+        <p>아이온2는 키나 시세와 쌀먹 탐색 수요가 동시에 확인되는 게임입니다. 신규 출시 이후 키나·아이템·계정 거래 수요가 지속적으로 발생하고 있습니다. 아이온2 재화 시세는 아이템매니아에서 확인하세요.</p>
+        <a href="https://www.itemmania.com/sell/list.html?search_game=5799" target="_blank" class="go-btn">아이온2 거래 보러가기 →</a>
+      </div>
+
+      <div class="seo-game-item">
+        <h3>메이플스토리 쌀먹 · 메소 시세</h3>
+        <p>메이플스토리는 메소 거래 수요가 꾸준한 대표 게임입니다. 보스 보상·사냥·이벤트 등 다양한 수급 루트로 메소·아이템·계정 거래가 활발합니다. 메소 시세는 패치와 이벤트에 따라 변동되므로 최신 시세를 확인하세요.</p>
+        <a href="https://www.itemmania.com/sell/list.html?search_game=138" target="_blank" class="go-btn">메이플스토리 거래 보러가기 →</a>
+      </div>
+
+      <div class="seo-game-item">
+        <h3>던전앤파이터 쌀먹 · 골드 시세</h3>
+        <p>던전앤파이터는 골드 시세 기반의 거래 수요가 꾸준한 게임입니다. 시즌 이벤트 기간에 거래량이 급증하는 특성이 있습니다. 던파 골드·아이템 시세는 아이템매니아에서 확인하세요.</p>
+        <a href="https://www.itemmania.com/sell/list.html?search_game=281" target="_blank" class="go-btn">던전앤파이터 거래 보러가기 →</a>
+      </div>
+
+      <div class="seo-game-item">
+        <h3>로스트아크 쌀먹 · 골드 시세</h3>
+        <p>로스트아크는 골드 시세 검색 수요가 높은 게임입니다. 레이드 보상 기반의 골드 수급 구조로 거래 수요가 지속됩니다. 로아 골드 시세와 거래량은 아이템매니아에서 확인하세요.</p>
+        <a href="https://www.itemmania.com/sell/list.html?search_game=2696" target="_blank" class="go-btn">로스트아크 거래 보러가기 →</a>
+      </div>
+
+      <div class="seo-game-item">
+        <h3>리니지M 쌀먹 · 아데나 시세</h3>
+        <p>리니지M은 아데나·계정 거래 수요가 꾸준한 게임으로, 아데나·계정 거래 확장 후보입니다. 고과금 시장 특성상 재화 단가가 높아 거래 연결성이 좋습니다.</p>
+        <a href="https://www.itemmania.com/sell/list.html?search_game=3449" target="_blank" class="go-btn">리니지M 거래 보러가기 →</a>
+      </div>
+
+      <div class="seo-game-item">
+        <h3>거상 쌀먹 · 재화 시세</h3>
+        <p>거상은 검색량은 제한적이나 쌀먹 목적성이 뚜렷한 고정 유저층을 보유한 게임입니다. 거상 아이템·재화 거래는 아이템매니아에서 확인하세요.</p>
+        <a href="https://www.itemmania.com/sell/list.html?search_game=101" target="_blank" class="go-btn">거상 거래 보러가기 →</a>
+      </div>
+
+      <div class="seo-game-item">
+        <h3>메이플스토리월드 쌀먹 · 재화 시세</h3>
+        <p>메이플스토리월드(메이플플래닛)는 자사 거래량 기준으로 검토 가치가 있어 포함된 게임입니다. 메이플플래닛 서버 관련 수요와 자사 거래 기반 유입을 함께 확인할 예정입니다. 재화 시세는 아이템매니아에서 확인하세요.</p>
+        <a href="https://www.itemmania.com/sell/list.html?search_game=5233" target="_blank" class="go-btn">메이플스토리월드 거래 보러가기 →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 비교 테이블 -->
+  <div class="compare-block">
+    <div class="block-hd">게임별 재화 시세 · 거래 연결성 비교 <span>검색 수요 기준 정렬</span></div>
+    <table class="ct">
+      <thead>
+        <tr>
+          <th style="width:50px;white-space:nowrap;text-align:center">순위</th>
+          <th style="width:160px;white-space:nowrap">게임</th>
+          <th style="width:180px">대표 재화</th>
+          <th style="width:90px">검색 수요</th>
+          <th style="width:90px">거래 연결성</th>
+          <th style="width:110px">거래 페이지</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rank-num">1</td>
+          <td><span class="g-icon b-lineagec">⚔️</span><strong>리니지클래식</strong></td>
+          <td>아데나 · 아이템 · 계정</td>
+          <td class="dot-h">● 높음</td>
+          <td class="dot-h">● 높음</td>
+          <td><a href="https://www.itemmania.com/sell/list.html?search_game=5913" target="_blank" class="go-link">바로가기 →</a></td>
+        </tr>
+        <tr>
+          <td class="rank-num">2</td>
+          <td><span class="g-icon b-aion2">🌐</span><strong>아이온2</strong></td>
+          <td>키나 · 아이템 · 계정</td>
+          <td class="dot-h">● 높음</td>
+          <td class="dot-h">● 높음</td>
+          <td><a href="https://www.itemmania.com/sell/list.html?search_game=5799" target="_blank" class="go-link">바로가기 →</a></td>
+        </tr>
+        <tr>
+          <td class="rank-num">3</td>
+          <td><span class="g-icon b-maple">🍁</span><strong>메이플스토리</strong></td>
+          <td>메소 · 아이템 · 계정</td>
+          <td class="dot-h">● 높음</td>
+          <td class="dot-h">● 높음</td>
+          <td><a href="https://www.itemmania.com/sell/list.html?search_game=138" target="_blank" class="go-link">바로가기 →</a></td>
+        </tr>
+        <tr>
+          <td class="rank-num">4</td>
+          <td><span class="g-icon b-dnf">🗡️</span><strong>던전앤파이터</strong></td>
+          <td>골드 · 아이템</td>
+          <td class="dot-m">● 중간</td>
+          <td class="dot-m">● 중간</td>
+          <td><a href="https://www.itemmania.com/sell/list.html?search_game=281" target="_blank" class="go-link">바로가기 →</a></td>
+        </tr>
+        <tr>
+          <td class="rank-num">5</td>
+          <td><span class="g-icon b-loa">🏹</span><strong>로스트아크</strong></td>
+          <td>골드 · 재료</td>
+          <td class="dot-m">● 중간</td>
+          <td class="dot-m">● 중간</td>
+          <td><a href="https://www.itemmania.com/sell/list.html?search_game=2696" target="_blank" class="go-link">바로가기 →</a></td>
+        </tr>
+        <tr>
+          <td class="rank-num">6</td>
+          <td><span class="g-icon b-lineagem">⚔️</span><strong>리니지M</strong></td>
+          <td>아데나 · 계정</td>
+          <td class="dot-m">● 중간</td>
+          <td class="dot-m">● 중간</td>
+          <td><a href="https://www.itemmania.com/sell/list.html?search_game=3449" target="_blank" class="go-link">바로가기 →</a></td>
+        </tr>
+        <tr>
+          <td class="rank-num">7</td>
+          <td><span class="g-icon b-gosang">🏺</span><strong>거상</strong></td>
+          <td>재화 · 아이템</td>
+          <td class="dot-l">● 낮음</td>
+          <td class="dot-m">● 중간</td>
+          <td><a href="https://www.itemmania.com/sell/list.html?search_game=101" target="_blank" class="go-link">바로가기 →</a></td>
+        </tr>
+        <tr>
+          <td class="rank-num">8</td>
+          <td style="white-space:nowrap"><span class="g-icon b-maplew">🌍</span><strong>메이플스토리월드</strong></td>
+          <td>재화 · 아이템</td>
+          <td class="dot-l">● 낮음</td>
+          <td class="dot-m">● 중간</td>
+          <td><a href="https://www.itemmania.com/sell/list.html?search_game=5233" target="_blank" class="go-link">바로가기 →</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-block">
+    <div class="block-hd">자주 묻는 질문</div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">리니지클래식 쌀먹 가능한가요?</div>
+      <div class="faq-a">리니지클래식은 아데나 시세 수요가 높고 거래 연결성이 좋아 쌀먹 관심 유저가 가장 많이 탐색하는 게임입니다. 실시간 아데나 시세와 거래량은 아이템매니아 리니지클래식 거래 페이지에서 확인하세요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">아이온2 쌀먹 가능한가요?</div>
+      <div class="faq-a">아이온2는 키나 시세와 쌀먹 탐색 수요가 동시에 확인되는 게임입니다. 키나·아이템·계정 거래 시세는 아이템매니아에서 확인할 수 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">메이플스토리 쌀먹 가능한가요?</div>
+      <div class="faq-a">메이플스토리는 메소·아이템·계정 거래 수요가 꾸준한 대표 게임입니다. 보스 보상·사냥·이벤트 등 다양한 수급 루트가 있으며, 최신 메소 시세는 아이템매니아에서 확인하세요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">게임 재화 시세는 어디서 확인하나요?</div>
+      <div class="faq-a">아이템매니아 게임별 상품 리스트 페이지에서 실시간 거래 시세와 거래량을 확인할 수 있습니다. 위 각 게임의 "거래 보러가기" 버튼을 클릭하면 바로 이동합니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">아이템매니아에서 안전하게 거래하는 방법은?</div>
+      <div class="faq-a">아이템매니아는 에스크로 방식의 안전거래 시스템을 제공합니다. 거래 완료 전까지 대금이 보호되며, 판매자·구매자 모두 실명 인증 후 거래가 이루어집니다. 판매자 평점과 거래 이력을 사전에 확인하는 것을 권장합니다.</div>
+    </div>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<!-- ══ 푸터 ══ -->
+<footer class="g-footer">
+  <div class="footer-top">
+    <div class="footer-links">
+      <a href="http://www.imicorp.co.kr/" target="_blank">회사소개</a>
+      <a href="https://www.itemmania.com/portal/company/useyak.html">이용약관</a>
+      <a href="https://www.itemmania.com/portal/company/useprotect.html" class="strong">개인정보 처리방침</a>
+      <a href="https://www.itemmania.com/portal/company/usejunior.html">청소년 보호정책</a>
+      <a href="https://www.itemmania.com/portal/company/useemail.html">이메일 수집거부</a>
+      <a href="https://www.imicorp.co.kr/careers/recruit.html" target="_blank">채용안내</a>
+      <a href="https://www.itemmania.com/portal/company/usepartner.html">제휴 문의</a>
+      <a href="https://www.itemmania.com/customer/">고객센터</a>
+    </div>
+    <hr class="footer-divider">
+  </div>
+  <div class="footer-inner">
+    <div class="footer-company">
+      <div class="footer-company-name">(주)아이엠아이</div>
+      <div class="footer-row"><span>전북특별자치도 전주시 덕진구 가리내로 56 아이엠아이빌딩 대표이사:박수종</span></div>
+      <div class="footer-row"><span>Fax:0505-247-8278</span><span>E-mail : itemmania@itemmania.com</span></div>
+      <div class="footer-row"><span>사업자등록번호 : 402-81-50705</span><span>통신판매업신고번호 : 제 2002-전주덕진-0015호</span></div>
+      <div class="footer-copy">Copyright ⓒ IMI. All rights reserved.</div>
+    </div>
+    <div class="footer-call">
+      <div class="footer-call-number"><a href="https://www.itemmania.com/customer/">1544-8278</a></div>
+      <div class="footer-call-desc"><a href="https://www.itemmania.com/customer/">365일 24시간 연중무휴</a></div>
+    </div>
+  </div>
+  <div class="footer-note">
+    아이템매니아는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 아이템매니아는 상품 거래정보 및 거래에 대하여 책임을 지지 않습니다.
+  </div>
+</footer>
+
+</body>
+</html>
